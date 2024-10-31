@@ -1,0 +1,21 @@
+Trong bài toán hệ thống khuyến nghị phim sử dụng thuật toán KNN (K-Nearest Neighbors),
+ bài toán này được xem như một bài toán hồi quy. Lý do là bạn đang dự đoán xếp hạng của người dùng cho một bộ phim cụ thể, 
+ và xếp hạng là một giá trị liên tục.
+Trong ngữ cảnh này, thuật toán KNN được sử dụng để tìm các người dùng có sở thích tương tự (các hàng xóm gần nhất) 
+và dựa trên xếp hạng của họ để dự đoán xếp hạng cho bộ phim mà người dùng chưa đánh giá. 
+Do đó, nó điều quan trọng là làm việc với giá trị liên tục (xếp hạng) thay vì các nhãn rời rạc, làm cho bài toán trở thành một bài toán hồi quy.
+
+
+Đây là Mô hình đề xuất phim của chúng tôi, Trong KNearestNeighbors này, 
+tôi đã sử dụng Xếp hạng rõ ràng để xây dựng mô hình này. 
+Và bằng cách sử dụng kỹ thuật tương tự này, chúng tôi có thể xây dựng bất kỳ hệ thống đề xuất nào.
+
+
+
+Bài toán trên sử dụng thuật toán KNN (K-Nearest Neighbors) dựa trên độ đo cosine similarity để đánh giá sự tương đồng giữa các người dùng hoặc giữa các bộ phim.
+Trong bài toán xây dựng hệ thống khuyến nghị phim, mỗi người dùng được biểu diễn bằng một vector xếp hạng cho các bộ phim. 
+Mỗi hàng của ma trận dữ liệu là một bộ phim và mỗi cột là một người dùng, 
+với giá trị tại mỗi ô là xếp hạng tương ứng của người dùng cho bộ phim đó. 
+KNN sau đó tính độ tương đồng cosine giữa các người dùng hoặc giữa các bộ phim dựa trên các vector xếp hạng này.
+Khi có một người dùng hoặc bộ phim mới cần được đề xuất, KNN tìm các người dùng (hoặc bộ phim) gần nhất dựa trên độ tương đồng cosine 
+và sử dụng xếp hạng của chúng để dự đoán xếp hạng cho người dùng hoặc bộ phim mới đó.
